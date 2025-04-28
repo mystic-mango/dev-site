@@ -42,7 +42,7 @@ export function ProjectCards() {
                     fill 
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                    className={`transition-all duration-500 hover:scale-105 ${imagesLoaded[project.id] ? 'opacity-100' : 'opacity-0'}`}
+                    className={`transition-all object-top duration-500 hover:scale-105 ${imagesLoaded[project.id] ? 'opacity-100' : 'opacity-0'}`}
                     priority={project.id === "basdaq" || project.id === "gummi"}
                     quality={85}
                     onLoad={() => handleImageLoad(project.id)}

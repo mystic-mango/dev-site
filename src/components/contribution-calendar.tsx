@@ -48,7 +48,7 @@ export function ContributionCalendar() {
   };
 
   return (
-    <div className="mt-4 overflow-auto scrollbar-hide">
+    <div className=" overflow-auto scrollbar-hide">
       <GitHubCalendar
         username={GITHUB_USERNAME}
         theme={theme}

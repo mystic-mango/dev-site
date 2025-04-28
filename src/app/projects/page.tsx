@@ -50,7 +50,7 @@ export default function ProjectsPage() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, 768px"
                     priority={project.id === "basdaq"}
                     quality={90}

@@ -59,7 +59,7 @@ export default async function Page({
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 768px"
                 priority
                 quality={95}
@@ -149,7 +149,7 @@ export default async function Page({
                           src={otherProject.image}
                           alt={otherProject.title}
                           fill
-                          className="object-cover"
+                          className="object-cover object-top"
                           sizes="(max-width: 640px) 100vw, 50vw"
                         />
                       </div>

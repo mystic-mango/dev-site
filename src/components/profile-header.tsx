@@ -4,32 +4,56 @@ import { Button } from "@/components/ui/button";
 
 export function ProfileHeader() {
   return (
-    <div className="mb-12 sm:mb-24">
+    <div className="mb-8 sm:mb-12">
       <div className="text-sm text-muted-foreground mb-2">
         Hey, It&apos;s me 👋
       </div>
-      
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-widest mb-2 font-mono">Tom Blake <span className="text-muted-foreground text-sm"> [aka Mango]</span></h1>
+
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-widest mb-2 font-mono">
+        Tom Blake{" "}
+        <span className="text-muted-foreground text-sm"> [aka Mango]</span>
+      </h1>
       <div className="text-muted-foreground text-sm mb-4 sm:mb-6">
         @pom-dev @mystic-mango
       </div>
-      
+
       <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm">
         <div>
-          Yup! I&apos;m a <span className="text-foreground font-medium">Web Developer</span>. Big deal, right? But wait — there&apos;s more! I&apos;m not just any developer,
-          I&apos;m a <span className="text-foreground font-medium">Full Stack Developer</span>. And if that wasn&apos;t enough, guess what?
-          maybe <span className="text-foreground font-medium">Freelancer</span>? Oh yeah, I&apos;ve got that badge too!
+          I&apos;m a{" "}
+          <span className="text-foreground font-medium">Frontend Engineer</span>{" "}
+          with a unique background bridging technical disciplines. My journey
+          from{" "}
+          <span className="text-foreground font-medium">
+            aerospace engineering
+          </span>{" "}
+          to{" "}
+          <span className="text-foreground font-medium">Web3 development</span>{" "}
+          gives me a distinctive approach to solving complex problems and
+          creating exceptional digital experiences.
         </div>
-        
+
         <div>
-          I love both <span className="text-foreground font-medium">Development</span> and <span className="text-foreground font-medium">Design</span>. So, That means I can
-          create beautiful and functional websites. I&apos;m always looking
-          for new opportunities to learn and grow.
+          I&apos;ve led development teams, built trading platforms, and
+          contributed to innovative projects in defi.
+          My expertise lies in creating{" "}
+          <span className="text-foreground font-medium">
+            beautiful interfaces
+          </span>{" "}
+          backed by{" "}
+          <span className="text-foreground font-medium">
+            robust functionality
+          </span>
+          , all aimed at expanding user freedom and control across the digital
+          landscape.
         </div>
-        
+
         <div className="flex flex-wrap gap-3 mt-6 sm:mt-8">
-          <Button variant="outline" className="gap-2 rounded-full py-1 h-auto text-xs bg-card hover:bg-muted"
-          onClick={() => window.open('https://calendly.com/mystic-mango', '_blank')}
+          <Button
+            variant="outline"
+            className="gap-2 rounded-full py-1 h-auto text-xs bg-card hover:bg-muted"
+            onClick={() =>
+              window.open("https://calendly.com/mystic-mango", "_blank")
+            }
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -49,9 +73,11 @@ export function ProfileHeader() {
             </svg>
             Book a Meeting
           </Button>
-          
-          <Button variant="outline" className="gap-2 rounded-full py-1 h-auto text-xs bg-card hover:bg-muted"
-          onClick={() => window.location.href = 'mailto:tom@tomblake.dev'}
+
+          <Button
+            variant="outline"
+            className="gap-2 rounded-full py-1 h-auto text-xs bg-card hover:bg-muted"
+            onClick={() => (window.location.href = "mailto:tom@tomblake.dev")}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -74,4 +100,4 @@ export function ProfileHeader() {
       </div>
     </div>
   );
-} 
+}

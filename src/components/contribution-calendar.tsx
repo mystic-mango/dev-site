@@ -28,10 +28,22 @@ export function ContributionCalendar() {
     return () => observer.disconnect();
   }, []);
 
-  // Define theme with both light and dark variants
+  // Define theme with both light and dark variants using CSS variables from globals.css
   const theme = {
-    light: ['#f0f0f0', '#fff4c8', '#ffd95a', '#ff9b54', '#ff5768'],
-    dark: ['#161b22', '#2c1c2c', '#512940', '#b24592', '#f15f79'],
+    light: [
+      'var(--card)',
+      'var(--accent)',
+      'var(--primary)',
+      'var(--chart-4)',
+      'var(--chart-5)'
+    ],
+    dark: [
+      'var(--card)',
+      'var(--accent)',
+      'var(--primary)',
+      'var(--chart-4)',
+      'var(--chart-5)'
+    ],
   };
 
   return (

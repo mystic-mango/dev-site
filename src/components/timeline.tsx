@@ -36,9 +36,9 @@ const timelineItems: TimelineItem[] = [
   },
   {
     id: "sharedstake",
-    title: "SharedStake.org",
+    title: "SharedStake",
     link: "https://sharedstake.org",
-    period: "2023 - Now",
+    period: "2023 - 2023",
     icon: (
       <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-card flex items-center justify-center text-foreground flex-shrink-0">
       <svg

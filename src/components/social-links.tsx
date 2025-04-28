@@ -128,8 +128,8 @@ const socialLinks = [
 
 export function SocialLinks() {
   return (
-    <div className="mt-6 sm:mt-8">
-      <div className="text-2xs sm:text-xs text-muted-foreground mb-3 sm:mb-4">
+    <div className="mt-12 sm:mt-16">
+      <div className="text-xs  text-muted-foreground mb-3 sm:mb-4">
         You can check these <span className="text-foreground">links</span> if you wish to
       </div>
       <div className="flex flex-wrap gap-2">
@@ -138,7 +138,7 @@ export function SocialLinks() {
             key={link.id}
             variant="outline"
             size="sm"
-            className="gap-1.5 sm:gap-2 rounded-full py-1 h-auto text-2xs sm:text-xs bg-card hover:bg-muted border-border"
+            className="gap-1.5 sm:gap-2 rounded-full py-1 h-auto text-xs  bg-card hover:bg-muted border-border"
             asChild
           >
             <a href={link.url} target="_blank" rel="noopener noreferrer">

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function ProfileHeader() {
   return (
-    <div className="mb-8 sm:mb-10">
+    <div className="mb-12 sm:mb-24">
       <div className="text-sm text-muted-foreground mb-2">
         Hey, It&apos;s me 👋
       </div>

@@ -15,7 +15,7 @@ export function ProjectCards() {
 
   return (
     <div className="mt-8 sm:mt-12">
-      <div className="mb-4 sm:mb-6 text-2xs sm:text-xs text-muted-foreground flex items-center justify-between">
+      <div className="mb-4 sm:mb-6 text-xs text-muted-foreground flex items-center justify-between sm:flex-row flex-col gap-2">
         <div>
           Still not sure? Check out my <span className="text-foreground font-medium">Projects</span>
         </div>

@@ -114,7 +114,7 @@ const timelineItems: TimelineItem[] = [
 
 export function Timeline() {
   return (
-    <div className="w-full mt-6 sm:mt-8">
+    <div className="w-full mt-12 sm:mt-16">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6">
         {timelineItems.map((item) => (
           <div key={item.id} className="flex items-center gap-3 sm:gap-4 ">

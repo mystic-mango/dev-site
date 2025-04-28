@@ -5,12 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { notFound } from "next/navigation";
 
-interface ProjectDetailPageProps {
-  params: {
-    id: string;
-  };
-}
-
 // Define projects directly in case the import fails
 const projectsData = [
   {
@@ -64,8 +58,15 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
-  const project = projectsToUse.find((p) => p.id === params.id);
+type Params = Promise<{ id: string }>;
+
+export default async function Page({
+  params,
+}: {
+  params: Params;
+}) {
+  const { id } = await params;
+  const project = projectsToUse.find((p) => p.id === id);
   
   if (!project) {
     notFound();
@@ -181,7 +182,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
             <h2 className="text-lg font-medium mb-4">Other Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {projectsToUse
-                .filter((p) => p.id !== project.id)
+                .filter((p) => p.id !== id)
                 .slice(0, 2)
                 .map((otherProject) => (
                   <Link href={`/projects/${otherProject.id}`} key={otherProject.id}>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import GitHubCalendar from "react-github-calendar";
+import { Tooltip as MuiTooltip } from '@mui/material'
 
 // GitHub username - replace with actual GitHub username
 const GITHUB_USERNAME = "mystic-mango";
@@ -56,12 +57,62 @@ export function ContributionCalendar() {
         fontSize={14}
         colorScheme={colorScheme}
         hideMonthLabels={false}
-        hideColorLegend={true}
+        hideColorLegend={false}
+        year={"last"}
         labels={{
-          months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-          weekdays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+          // months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          // weekdays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
           totalCount: '{{count}} contributions this year',
         }}
+        renderBlock={(block, activity) => (
+          <MuiTooltip
+            title={`${activity.count} activities on ${activity.date}`}
+            arrow
+            slotProps={{
+              popper: {
+                sx: {
+                  '& .MuiTooltip-tooltip': {
+                    background: 'var(--popover)',
+                    color: 'var(--popover-foreground)',
+                    border: '1px solid var(--border)',
+                    fontSize: 13,
+                    fontFamily: 'inherit',
+                    boxShadow: '0 2px 8px 0 rgba(0,0,0,0.15)',
+                  },
+                  '& .MuiTooltip-arrow': {
+                    color: 'var(--popover)',
+                  },
+                },
+              },
+            }}
+          >
+            {block}
+          </MuiTooltip>
+        )}
+        renderColorLegend={(block, level) => (
+          <MuiTooltip
+            title={`Level: ${level}`}
+            slotProps={{
+              popper: {
+                sx: {
+                  '& .MuiTooltip-tooltip': {
+                    background: 'var(--popover)',
+                    color: 'var(--popover-foreground)',
+                    border: '1px solid var(--border)',
+                    fontSize: 13,
+                    fontFamily: 'inherit',
+                    boxShadow: '0 2px 8px 0 rgba(0,0,0,0.15)',
+                  },
+                  '& .MuiTooltip-arrow': {
+                    color: 'var(--popover)',
+                  },
+                },
+              },
+            }}
+          >
+            {block}
+          </MuiTooltip>
+        )}
       />
       <style jsx global>{`
         .scrollbar-hide::-webkit-scrollbar {

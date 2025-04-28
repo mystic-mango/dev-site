@@ -5,7 +5,7 @@ export const projects = [
       subtitle: "Beracahin native trading terminal for decentralized trading",
       image: "/basdaq.png",
       description: "A comprehensive trading terminal built for the Berachain ecosystem, enabling decentralized trading with advanced charting and order functionality.",
-      technologies: ["Next.js", "TypeScript", "Wagmi", "Viem", "Zustand", "tRPC", "Zod", "TradingView Charts"],
+      technologies: ["Next.js", "TypeScript", "Wagmi", "Viem", "Privy", "Zustand", "tRPC", "Zod", "Supabase", "TradingView Charts"],
       liveUrl: "https://basdaq.gummi.fi",
     },
     {

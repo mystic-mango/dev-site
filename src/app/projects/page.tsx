@@ -7,7 +7,6 @@ import { projects } from "@/app/config/projects";
 export default function ProjectsPage() {
   
 
-  // Use imported projects if available, otherwise use local data
   const projectsToDisplay = Array.isArray(projects) ? projects : [];
   
   return (

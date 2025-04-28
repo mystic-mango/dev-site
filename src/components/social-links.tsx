@@ -49,7 +49,7 @@ const socialLinks = [
   {
     id: "resume",
     name: "Resume",
-    url: "/resume.pdf",
+    url: "/Tom-Blake-Resume.pdf",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

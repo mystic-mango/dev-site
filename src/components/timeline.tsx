@@ -1,7 +1,10 @@
 "use client";
 
+import Link from "next/link";
+
 type TimelineItem = {
   id: string;
+  link?: string;
   title: string;
   period: string;
   icon: React.ReactNode;
@@ -11,6 +14,7 @@ const timelineItems: TimelineItem[] = [
   {
     id: "gummi",
     title: "Gummi.fi",
+    link: "https://gummi.fi",
     period: "2023 - Now",
     icon: (
       <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-card flex items-center justify-center text-foreground flex-shrink-0">
@@ -33,6 +37,7 @@ const timelineItems: TimelineItem[] = [
   {
     id: "sharedstake",
     title: "SharedStake.org",
+    link: "https://sharedstake.org",
     period: "2023 - Now",
     icon: (
       <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-card flex items-center justify-center text-foreground flex-shrink-0">
@@ -56,6 +61,7 @@ const timelineItems: TimelineItem[] = [
   {
     id: "manna",
     title: "Manna.aero",
+    link: "https://manna.aero",
     period: "2019 - 2024",
     icon: (
       <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-card flex items-center justify-center text-foreground flex-shrink-0">
@@ -114,9 +120,15 @@ export function Timeline() {
           <div key={item.id} className="flex items-center gap-3 sm:gap-4 ">
             {item.icon}
             <div>
-              <div className="font-medium text-foreground text-xs sm:text-sm">
-                {item.title}
-              </div>
+              {item.link ? (
+                <Link href={item.link} target="_blank" rel="noopener noreferrer" className="font-medium text-foreground text-xs sm:text-sm hover:underline underline-offset-2">
+                  {item.title}
+                </Link>
+              ) : (
+                <div className="font-medium text-foreground text-xs sm:text-sm">
+                  {item.title}
+                </div>
+              )}
               <div className="text-xs  text-muted-foreground">
                 {item.period}
               </div>

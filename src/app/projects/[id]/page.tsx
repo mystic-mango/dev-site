@@ -1,56 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { projects } from "@/components/project-cards";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { notFound } from "next/navigation";
-
-// Define projects directly in case the import fails
-const projectsData = [
-  {
-    id: "basdaq",
-    title: "Basdaq",
-    subtitle: "Beracahin native trading terminal for decentralized trading",
-    image: "/basdaq.png",
-    description: "A comprehensive trading terminal built for the Berachain ecosystem, enabling decentralized trading with advanced charting and order functionality.",
-    technologies: ["React", "TypeScript", "Web3", "TradingView API"],
-    liveUrl: "https://basdaq.example.com",
-    githubUrl: "https://github.com/mystic-mango/basdaq",
-  },
-  {
-    id: "gummi",
-    title: "Gummi",
-    subtitle: "The Gummi.fi landing page",
-    image: "/gummi.png",
-    description: "Landing page for Gummi.fi, a DeFi platform focused on simplifying crypto asset management with a sleek, intuitive interface.",
-    technologies: ["Next.js", "TailwindCSS", "React", "Framer Motion"],
-    liveUrl: "https://gummi.fi",
-    githubUrl: "https://github.com/mystic-mango/gummi-landing",
-  },
-  {
-    id: "gummi95",
-    title: "Gummi95",
-    subtitle: "Win95 Teaser App for Gummi",
-    image: "/gummi95.png",
-    description: "A nostalgic Windows 95-inspired teaser application for the Gummi platform, combining retro aesthetics with modern functionality.",
-    technologies: ["React", "React95", "JavaScript", "CSS"],
-    liveUrl: "https://gummi95.example.com",
-    githubUrl: "https://github.com/mystic-mango/gummi95",
-  },
-  {
-    id: "sharedstake",
-    title: "SharedStake",
-    subtitle: "SharedStake Ethereum liquid staking derivative UI",
-    image: "/sharedstake.png",
-    description: "User interface for SharedStake, an Ethereum liquid staking solution that allows users to stake ETH while maintaining liquidity.",
-    technologies: ["Next.js", "ethers.js", "TailwindCSS", "TypeScript"],
-    liveUrl: "https://sharedstake.org",
-    githubUrl: "https://github.com/mystic-mango/sharedstake-ui",
-  },
-];
+import { projects } from "@/app/config/projects";
 
 // Use imported projects if available, otherwise use local data
-const projectsToUse = Array.isArray(projects) ? projects : projectsData;
+const projectsToUse = Array.isArray(projects) ? projects : [];
 
 export function generateStaticParams() {
   return projectsToUse.map((project) => ({
@@ -119,7 +75,7 @@ export default async function Page({
                   <h2 className="font-medium text-sm sm:text-base mb-2">About this project</h2>
                   <p className="text-sm sm:text-base">{project.description}</p>
                 </div>
-                
+                {project.technologies && (
                 <div>
                   <h2 className="font-medium text-sm sm:text-base mb-2">Technologies</h2>
                   <div className="flex flex-wrap gap-2">
@@ -130,6 +86,7 @@ export default async function Page({
                     ))}
                   </div>
                 </div>
+                )}
                 
                 <div className="pt-2 flex flex-wrap gap-3">
                   <Button asChild size="sm" variant="default">
@@ -153,7 +110,7 @@ export default async function Page({
                       Live Demo
                     </a>
                   </Button>
-                  <Button asChild size="sm" variant="outline">
+                  {/* <Button asChild size="sm" variant="outline">
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +129,7 @@ export default async function Page({
                       </svg>
                       View Code
                     </a>
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </div>

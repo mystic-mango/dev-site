@@ -146,7 +146,6 @@ export default function SkillsPage() {
                   <PiCursorFill /> Cursor
                 </Badge>{" "}
                 IDE for creating awesome projects.{" "}
-                <span className="text-muted-foreground">🖤</span>
               </p>
 
               <div className="space-y-6">

@@ -24,7 +24,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="w-full flex flex-col items-center justify-center py-8 mt-8 ">
+      <footer className="w-full flex flex-col items-center justify-center py-8 mt-8 mb-12 lg:mb-0">
         <div className="flex flex-col items-center gap-2">
           <div className="flex flex-row items-center gap-1 text-sm text-muted-foreground font-medium">Designed &amp; Made with <span role="img" aria-label="love"><CiHeart />
           </span></div>

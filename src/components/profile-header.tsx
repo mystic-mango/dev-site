@@ -11,7 +11,7 @@ export function ProfileHeader() {
 
       <h1 className="text-3xl sm:text-4xl font-bold tracking-widest mb-2 font-mono">
         Tom Blake{" "}
-        <span className="text-muted-foreground text-sm"> [aka Mango]</span>
+        <span className="text-muted-foreground text-sm whitespace-nowrap"> [aka Mango]</span>
       </h1>
       <div className="text-muted-foreground text-sm mb-4 sm:mb-6">
         @pom-dev @mystic-mango
@@ -73,7 +73,7 @@ export function ProfileHeader() {
             </svg>
             Book a Meeting
           </Button>
-
+or
           <Button
             variant="outline"
             className="gap-2 rounded-full py-1 h-auto text-xs bg-card hover:bg-muted"

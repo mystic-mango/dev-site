@@ -31,6 +31,7 @@ import {
   SiResend,
   SiStripe,
   SiEthers,
+  SiBun,
 } from "react-icons/si";
 import { BsFiletypeSql } from "react-icons/bs";
 import { PiCursorFill } from "react-icons/pi";
@@ -145,7 +146,9 @@ export default function SkillsPage() {
                 <Badge variant="secondary" className="inline-flex gap-1">
                   <PiCursorFill /> Cursor
                 </Badge>{" "}
-                IDE for creating awesome projects.{" "}
+                IDE for creating awesome projects. And <Badge variant="secondary" className="inline-flex gap-1">
+                  <SiBun /> Bun
+                </Badge>{" "} for my package manager.
               </p>
 
               <div className="space-y-6">
